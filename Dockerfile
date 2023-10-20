@@ -1,7 +1,6 @@
 # Add the rocker/verse Docker image for R 4.2.1
 # this includes quarto and the latest tidyverse version for R 4.2.1 
 FROM rocker/verse:4.2.1
-ENV QUARTO_VERSION="1.3.433"
 
 # Add files to container
 ADD axis-extension.qmd /home/rstudio/
