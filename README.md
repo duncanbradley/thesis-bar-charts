@@ -17,3 +17,11 @@ This repository provides resources for re-creating the computational environment
 8. Open `axis-extension.qmd` and press Render to generate `axis-extension.pdf`
 
 Note: Computationally intensive statistical models have been saved in `axis-extension_cache`. To speed-up rendering, these cached models are loaded instead of executing the code that generated them. To generate models from scratch, change the `eval_models` parameter in line 6 to `true`.
+
+In case of Sementation Fault, add the following code to the script and run `rmarkdown::render("axis-extension.qmd", output_file = "axis-extension.pdf")`
+
+```{r, setup-options}
+knitr::opts_chunk$set(
+  echo = FALSE, include = FALSE, warning = FALSE, message = FALSE
+)
+```
